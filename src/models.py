@@ -47,7 +47,7 @@ class Favorito(Base):
     __tablename__ = 'favoritos'
     id = Column(Integer, primary_key=True)
     
-    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=True)
+    usuario_id = Column(Integer, ForeignKey('usuarios.id'), nullable=False)
     planeta_id = Column(Integer, ForeignKey('planetas.id'), nullable=True)
     personaje_id = Column(Integer, ForeignKey('personajes.id'), nullable=True)
     vehiculo_id = Column(Integer, ForeignKey('vehiculos.id'), nullable=True)
